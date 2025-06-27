@@ -91,6 +91,36 @@ void print8(int n){
     }
 }
 
+void print10(int n){
+    for(int i=1; i<=2*n-1; i++){
+        int stars = i;
+        if(i>n){
+            stars = 2*n-i;
+        }
+        for(int j = 1; j<=stars;j++){
+            cout<<"*";
+        }
+        cout<<"\n";
+    }
+}
+
+void print11(int n){
+    for(int i = 0; i<n ; i++){
+        int start=1;
+        if(start%2==0){
+            start = 1;
+        }
+        else{
+            start = 0;
+        }
+        for (int j=0;j<=i;j++){
+            cout<<start;
+            start = 1- start;
+        }
+            
+        cout<<"\n";
+    }
+}
 int main(){
     int t;
     cout<<"enter t: ";
@@ -99,7 +129,9 @@ int main(){
         int n;
         cout<<"enter n: ";
         cin>>n;
-        print8(n);
+        // print7(n);
+        // print8(n);
+        print11(n);
     }
     return 0;
 }
@@ -187,4 +219,37 @@ enter n: 5
  *******
 *********
 
+print8(n)
+enter n: 5
+*********
+ *******
+  *****
+   ***
+    *
+    
+print9(n)
+n=5
+
+    *    
+   ***
+  *****
+ *******
+*********
+*********
+ *******
+  *****
+   ***
+    *
+    
+print10(n)
+enter n: 5
+*
+**
+***
+****
+*****
+****
+***
+**
+*
 */
