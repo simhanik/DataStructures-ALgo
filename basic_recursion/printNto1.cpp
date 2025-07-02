@@ -1,14 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
-void nameNtimes(int i, int n){
-    if(i>n) return;
-    cout<<"Hello"<<endl;
-    nameNtimes(i+1,n);
+void nTimes(int i, int n){
+    if(i<1) return;
+    cout<<i<<endl;
+    nTimes(i-1,n);
 }
 int main(){
     int n;
     cout<<"Enter how many times you want to print: ";
     cin>>n;
-    nameNtimes(1,n);
+    nTimes(n,n);
     return 0;
 }
