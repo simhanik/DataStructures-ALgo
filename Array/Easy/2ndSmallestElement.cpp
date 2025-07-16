@@ -4,8 +4,8 @@ using namespace std;
 int getSecondSmallest(vector<int> &arr) {
         // code here
         int smallest = arr[0];
-        int ssmallest = INT16_MAX;
-        for(int i = 0 ; i < arr.size(); i++){
+        int ssmallest = INT_MAX;
+        for(int i = 1 ; i < arr.size(); i++){
             if(arr[i] < smallest) {
                 ssmallest = smallest;
                 smallest = arr[i];
@@ -14,6 +14,9 @@ int getSecondSmallest(vector<int> &arr) {
                 ssmallest = arr[i];
             }
         }
+        // If no valid second smallest
+        if (ssmallest == INT_MAX){
+            return -1;}
         return ssmallest;
     }
 int main(){
@@ -26,6 +29,9 @@ int main(){
         cin>>arr[i];
     }
     int res = getSecondSmallest(arr);
-    cout<<"Second smallest element in the array : "<< res; 
+    if (res == -1)
+        cout << "No second smallest element exists.\n";
+    else
+        cout << "Second smallest element in the array: " << res << endl; 
     return 0;
 }
