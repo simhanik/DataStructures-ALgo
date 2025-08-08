@@ -29,10 +29,10 @@ vector<int>sortedArray(vector<int>a, vector<int>b){
         {
                 unionArr.push_back(a[i]);
         }
-        j++;
+        i++;
     }
 
-    while(j<n1){
+    while(j<n2){
         if(unionArr.size() == 0 || unionArr.back() != b[j])
         {
                 unionArr.push_back(b[j]);
